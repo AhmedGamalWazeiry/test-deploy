@@ -18,7 +18,7 @@ export default function Tap({ setChartData, isFileUploaded }) {
   const handleGetFiles = async () => {
     setClickOnFileIndex(-1);
     try {
-      const response = await axios.get(baseURL + "/api/files");
+      const response = await axios.get(baseURL + "api/files");
       setFilesList(response.data);
     } catch (error) {
       setFilesList([]);

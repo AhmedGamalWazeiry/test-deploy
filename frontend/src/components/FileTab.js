@@ -18,7 +18,7 @@ export default function FileTap({
 
   const handleFileUpload = async () => {
     try {
-      const response = await axios.get(baseURL + "/api/files/" + file_id);
+      const response = await axios.get(baseURL + "api/files/" + file_id);
 
       const newData = processDatabaseData(response.data);
       setChartData(newData);
@@ -32,7 +32,7 @@ export default function FileTap({
 
   const handleOnDelete = async (file_id) => {
     try {
-      await axios.delete(baseURL + "/api/files/" + file_id);
+      await axios.delete(baseURL + "api/files/" + file_id);
       toast.success("File successfully deleted.");
       const newData = defaultDataSets();
       setChartData(newData);

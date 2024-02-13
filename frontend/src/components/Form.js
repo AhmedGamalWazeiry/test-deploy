@@ -19,7 +19,7 @@ export default function Form({ setChartData, setIsFileUploaded }) {
       const formData = new FormData();
       formData.append("file", selectedFile);
 
-      const response = await axios.post(baseURL + "/api/files", formData, {
+      const response = await axios.post(baseURL + "api/files", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
